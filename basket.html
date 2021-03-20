@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Корзина</title>
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/header_footer.css">
+  <link rel="stylesheet" href="css/basket.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>  
+
+<!--[if lt IE 9]>
+  <script>
+    document.createElement("header" );
+    document.createElement("footer" );
+    document.createElement("section"); 
+    document.createElement("aside"  );
+    document.createElement("nav"    );
+    document.createElement("article"); 
+  </script>
+  <noscript>
+     <strong>Внимание!</strong>
+     Поскольку ваш браузер не поддерживает HTML5, некоторые элементы воспроизводятся с помощью JScript.
+     Однако в вашем браузере скрипты отключены, пожалуйста, включите их, чтобы браузер смог отобразить данную страницу.
+  </noscript>
+<![endif]-->
+
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <form action="URL" class="search-form" method="GET">
+        <input type="search" name="s" id="search" class="input-text" placeholder="Поиск по магазину. . ." required="">
+        <button class="button-search" type="submit"></button>
+      </form>
+      <a href="index.html" class="link-logo"><img src="images/logo/logo_1024x768_bl.svg" class="logo-img fluid-img" alt="Guitar Harmony"></a>
+      <div class="utils">
+        <div class="social-links">
+          <a class="social-icon social-icon-f" href="https://web.facebook.com" target="_blank"></a>
+          <a class="social-icon social-icon-t" href="https://twitter.com" target="_blank"></a>
+          <a class="social-icon social-icon-i" href="https://www.instagram.com/?hl=ru" target="_blank"></a>
+          <a class="cabinet-link" href="#"><span>Вход</span></a>         
+          <a class="social-icon shop-icon" href="basket.html"><span>1</span></a>        
+        </div>   
+      </div>
+    </header>
+    
+    <nav class="top-nav">
+      <ul class="menu">
+        <li class="menu-item"><a href="shop.html">Каталог</a></li>
+        <li class="menu-item"><a href="index.html">Главная</a></li>
+        <li class="menu-item"><a href="#">О нас</a></li>
+        <li class="menu-item"><a href="basket.html">Корзина</a></li>
+        <li class="menu-item"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Ваши товары в корзине:</h1>
+      <div class="container-cart">
+        <form action="/cart" id="cartform" class="table-form" method="POST">
+          <table>
+            <thead>
+            <tr class="top-labels">
+              <th></th>
+              <th class="item-title">Предмет</th>
+              <th class="item-price">Цена</th>
+              <th class="quantity">Количество</th>
+              <th class="line-price">Итого</th>
+              <th></th>
+            </tr>
+            </thead>
+              <tr>
+                <td class="thumb"><a href="single_good.html"><img src="images/guitars/Taylor_814CE_Electro_Acoustic_Guitar/Taylor_814CE_sm_60x60.jpg" class="fluid-img" alt="Taylor 814CE" title="Taylor 814CE"></a></td>
+                <td class="item-title">Taylor 814CE Electro Acoustic Guitar</td>
+                <td class="item-price">8157.20 руб</td>
+                <td class="quantity"><input type="text" name="field-quantity" id="quantity" class="text-quantity" value="1" size="1"></td>
+                <td class="line-price">8157.20 руб</td>
+                <td class="remove"><a href="#"><span class="icon">x</span></a></td>
+              </tr>
+              <tfoot>
+                <tr>
+                  <td colspan="3"></td>
+                  <td class="update-quantities"><input type="submit" id="update-cart" class="submit-update" name="update" value="Обновить"></td>
+                  <td class="subtotal">8157.20 руб</td>
+                  <td></td>
+                </tr>
+              </tfoot>
+          </table>
+          <div class="checkout-proceed">
+            <div class="additional-checkout-button">
+            <input class="button" type="submit" id="issue-order" name="checkout" value="Оформить заказ">
+              <span class="label">Или с помощью:</span>
+              <div class="webmoney-btn"><a href="https://www.webmoney.ru/"><img src="images/icons/WebMoney_logo_blue.svg" class="fluid-img" alt="Webmoney"></a></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>   
+  <footer>
+    <div class="container-footer">
+      <section class="footer-info">
+          <h3 class="title-footer">Будьте всегда с нами:</h3>
+          <form action="URL" class="search-form-footer" method="POST">
+            <input type="email" name="email" id="email-footer" class="input-text-footer" placeholder="Ваш e-mail адрес">
+            <input type="submit" name="join" value="Подписаться" id="btn-submit-footer" class="submit-btn">
+          </form>
+      </section>
+
+      <section class="footer-info">
+          <h3 class="title-footer">Наши контакты:</h3>
+          <p>
+            Республика Беларусь, г. Минск, 223051
+            <br>
+            ул. Первомайская, д. 13
+            <br>
+            ishablovskiy@gmail.com
+            <br>
+            +37544-738-64-00
+          </p>
+
+          <div class="footer-social-media-container">
+            <a href="https://www.facebook.com/" class="button-social-icon button-facebook-icon" target="_blank"></a>
+            <a href="https://twitter.com/" class="button-social-icon button-twitter-icon" target="_blank"></a>
+            <a href="https://www.instagram.com/" class="button-social-icon button-instagram-icon" target="_blank"></a>
+          </div>
+      </section>
+      
+      <div class="footer-info">
+          <div class="footer-logo">
+            <img src="images/logo/logo_1024x768_wh.svg" class="fluid-img" alt="Guitar harmony"></div>
+      </div>
+    </div>
+
+    <div class="footer-site-info">
+      <p>2018 Ilya Shablovsky, LLC — Alright, alright, all rights reserved.</p>
+      <img src="images/icons/payment.svg" alt="Payment">
+    </div>
+  </footer>
+  <div class="gul-up"></div>
+
+  <!--Import jQuery-->
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- jQuery for older IE -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Site Sripts -->  
+</body>
+</html>
